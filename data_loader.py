@@ -37,7 +37,7 @@ df['total_amount'] = df['quantity'] * df['unit_price']
 # IMPORTANT: Agar password me '@' hai to use '%40' likhein.
 # Example: 'my@pass' -> 'my%40pass'
 DB_USER = 'postgres'
-DB_PASSWORD = 'mypassword123'  # <--- Apna password yahan likhein
+DB_PASSWORD = 'password'  # <--- Apna password yahan likhein
 DB_HOST = 'localhost'
 DB_PORT = '5432'
 DB_NAME = 'sales_db'  # <--- Ensure karein ye database pgAdmin me bana ho
