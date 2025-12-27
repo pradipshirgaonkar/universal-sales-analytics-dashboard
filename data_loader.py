@@ -34,13 +34,13 @@ df = pd.DataFrame(data)
 df['total_amount'] = df['quantity'] * df['unit_price']
 
 # --- STEP 4: DATABASE CONNECTION SETUP ---
-# IMPORTANT: Agar password me '@' hai to use '%40' likhein.
+# IMPORTANT: .
 # Example: 'my@pass' -> 'my%40pass'
 DB_USER = 'postgres'
-DB_PASSWORD = 'password'  # <--- Apna password yahan likhein
+DB_PASSWORD = 'password'  # <---   password  
 DB_HOST = 'localhost'
 DB_PORT = '5432'
-DB_NAME = 'sales_db'  # <--- Ensure karein ye database pgAdmin me bana ho
+DB_NAME = 'sales_db'  # <--- Ensure database pgAdmin  
 
 # Connection String
 conn_string = f'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
@@ -49,7 +49,7 @@ engine = create_engine(conn_string)
 # --- STEP 5: INSERT INTO POSTGRESQL ---
 try:
     print("Connecting to PostgreSQL and inserting data...")
-    # 'replace' purani table ko delete karke naya 10,000 records wala table banayega
+     
     df.to_sql('sales_data', engine, if_exists='replace', index=False)
     
     print("-" * 30)
@@ -59,7 +59,7 @@ try:
     
 except Exception as e:
     print("-" * 30)
-    print(f"ERROR: Kuch gadbad ho gayi!\n{e}")
+    print(f"ERROR: check mistake!\n{e}")
     print("-" * 30)
 
 # Dashboard ke liye sample view
